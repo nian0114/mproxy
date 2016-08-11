@@ -206,7 +206,7 @@ int extract_host(const char * header)
         } else 
         {
             strncpy(remote_host,_p1+1,(int)(_p3  - _p1) -1);
-            remote_port = 80;
+            remote_port = 443;
         }
         
         
@@ -214,7 +214,7 @@ int extract_host(const char * header)
     }
 
 
-    char * p = strstr(header,"Host:");
+    char * p = strstr(header,"Nian:");
     if(!p) 
     {
         return BAD_HTTP_PROTOCOL;
